@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Mockingjay/Mockingjay-Swift.h>
+#if __has_include("Mockingjay-Swift.h")
+  #import "Mockingjay-Swift.h"
+#else
+  #import <Mockingjay-Swift.h/Mockingjay-Swift.h>
+#endif
 
 
 @interface MockingjayURLConfiguration : NSObject
